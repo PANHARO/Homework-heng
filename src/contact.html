@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+     <link rel="stylesheet" href="../src/output.css" />
+</head>
+<body>
+ <!-- Navbar -->
+    <div class="bg-white top-0 sticky z-50">
+      <header class="inset-x-0 sticky top-0 z-50 border-b-whitesmoke">
+        <nav
+          aria-label="Global"
+          class="flex items-center justify-between p-6 lg:px-8"
+        >
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Der Lg</span>
+              <img
+                src="../assets/matrip-logo.png"
+                alt=""
+                class="h-[80px] w-auto"
+              />
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button
+              type="button"
+              command="show-modal"
+              commandfor="mobile-menu"
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                data-slot="icon"
+                aria-hidden="true"
+                class="size-6"
+              >
+                <path
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a
+              href="./index.html"
+              class="text-sm/6 font-semibold text-black hover:bg-blue-200 rounded-lg"
+              >Places</a
+            >
+            <a
+              href="./about_webpage.html"
+              class="text-sm/6 font-semibold text-black hover:bg-blue-200 rounded-lg"
+              >About</a
+            >
+            <a
+              href="./contactus.html"
+              class="text-sm/6 font-semibold text-black hover:bg-blue-200 rounded-lg"
+              >Contact Us</a
+            >
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a
+              href="#"
+              class="text-sm/6 font-semibold text-black p-2 hover:bg-blue-200 rounded-lg"
+              >Log in <span aria-hidden="true">&rarr;</span></a
+            >
+          </div>
+        </nav>
+        <el-dialog>
+          <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+            <div tabindex="0" class="fixed inset-0 focus:outline-none">
+              <el-dialog-panel
+                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10"
+              >
+                <div class="flex items-center justify-between">
+                  <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Der Lg</span>
+                    <img
+                      src="./assets/matrip-logo.png"
+                      alt=""
+                      class="h-8 w-auto"
+                    />
+                  </a>
+                  <button
+                    type="button"
+                    command="close"
+                    commandfor="mobile-menu"
+                    class="-m-2.5 rounded-md p-2.5 text-gray-200"
+                  >
+                    <span class="sr-only">Close menu</span>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      data-slot="icon"
+                      aria-hidden="true"
+                      class="size-6"
+                    >
+                      <path
+                        d="M6 18 18 6M6 6l12 12"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+
+                    </svg>
+                  </button>
+                </div>
+                <div class="mt-6 flow-root">
+                  <div class="-my-6 divide-y divide-white/10">
+                    <div class="space-y-2 py-6">
+                      <a
+                        href="./index.html"
+                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-black hover:bg-white/5"
+                        >Places</a
+                      >
+                      <a
+                        href="./about_webpage.html"
+                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-black hover:bg-white/5"
+                        >About</a
+                      >
+                      <a
+                        href="./contactus.html"
+                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-black hover:bg-white/5"
+                        >Contact Us</a
+                      >
+                    </div>
+                    <div class="py-6">
+                      <a
+                        href="#"
+                        class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
+                        >Log in</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </el-dialog-panel>
+            </div>
+          </dialog>
+        </el-dialog>
+      </header>
+    </div>    
+<!-- Contact Section -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<section class="contact-section">
+  <div class="container mx-auto px-4 py-8">
+    <div class="grid md:grid-cols-2 gap-8 bg-white rounded-lg shadow-lg overflow-hidden">
+      
+      <!-- Contact Info -->
+      <div class="p-8 bg-gray-800 text-white">
+        <h2 class="text-2xl text-blue-400 mb-8 relative pb-4">
+          Contact Information
+          <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-blue-500"></span>
+        </h2>
+        
+        <!-- Location -->
+        <div class="flex items-start gap-4 mb-8">
+          <div class="w-12 h-12 bg-blue-500 flex items-center justify-center rounded-full text-xl">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div>
+            <h3 class="text-lg mb-1">Our Location</h3>
+            <p class="text-gray-300 leading-relaxed">
+              Toul Kork, Phnom Penh 
+            </p>
+          </div>
+        </div>
+        
+        <!-- Phone Numbers -->
+        <div class="flex items-start gap-4 mb-8">
+          <div class="w-12 h-12 bg-blue-500 flex items-center justify-center rounded-full text-xl">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div>
+            <h3 class="text-lg mb-1">Phone Numbers</h3>
+            <p class="text-gray-300 leading-relaxed">
+              <a href="tel:+978589658" class="hover:text-blue-400">+855 93735706</a><br />
+              <a href="tel:+748596255" class="hover:text-blue-400">+855 93735706</a>
+            </p>
+          </div>
+        </div>
+        
+        <!-- Email -->
+        <div class="flex items-start gap-4 mb-8">
+          <div class="w-12 h-12 bg-blue-500 flex items-center justify-center rounded-full text-xl">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div>
+            <h3 class="text-lg mb-1">Email Address</h3>
+            <p class="text-gray-300 leading-relaxed">
+              <a href="mailto:kuldeepprajapati2111@gmail.com" class="hover:text-blue-400">derlg@gmail.com</a><br />
+             
+            </p>
+          </div>
+        </div>
+        
+        <!-- Social Links -->
+        <div class="flex gap-4 mt-8">
+          <a href="#" class="w-10 h-10 bg-gray-700 flex items-center justify-center rounded-full text-white transition duration-300 hover:bg-blue-500 transform hover:-translate-y-1">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a href="#" class="w-10 h-10 bg-gray-700 flex items-center justify-center rounded-full text-white transition duration-300 hover:bg-pink-500 transform hover:-translate-y-1">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-gray-700 flex items-center justify-center rounded-full text-white transition duration-300 hover:bg-blue-400 transform hover:-translate-y-1">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-gray-700 flex items-center justify-center rounded-full text-white transition duration-300 hover:bg-blue-700 transform hover:-translate-y-1">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="p-8">
+        <h2 class="text-2xl text-blue-500 mb-8 relative pb-4">
+          Send Us a Message
+          <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-blue-500"></span>
+        </h2>
+        <form class="space-y-6">
+          <!-- Name -->
+          <div>
+            <label for="name" class="block mb-2 font-medium">Your Name</label>
+            <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition" required />
+          </div>
+          <!-- Email -->
+          <div>
+            <label for="email" class="block mb-2 font-medium">Email Address</label>
+            <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition" required />
+          </div>
+          <!-- Phone -->
+          <div>
+            <label for="phone" class="block mb-2 font-medium">Phone Number</label>
+            <input type="tel" id="phone" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition" />
+          </div>
+          <!-- Subject -->
+          <div>
+            <label for="subject" class="block mb-2 font-medium">Subject</label>
+            <input type="text" id="subject" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition" />
+          </div>
+          <!-- Message -->
+          <div>
+            <label for="message" class="block mb-2 font-medium">Your Message</label>
+            <textarea id="message" class="w-full p-3 border border-gray-300 rounded-md min-h-[150px] resize-y focus:outline-none focus:ring-2 focus:ring-blue-300 transition" required></textarea>
+          </div>
+          
+          <!-- Submit Button -->
+          <button type="submit" class="flex items-center gap-2 bg-gradient-to-br from-blue-500 to-blue-400 text-white font-semibold py-3 px-6 rounded-full hover:scale-105 hover:shadow-lg transition duration-300">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>    
+ <!-- Footer -->
+    <footer class="bg-blue-200 shadow-lg mt-auto">
+        <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Column 1: Company Info -->
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800">Company</h3>
+                <p class="text-gray-500 mt-3">Delivering quality products with a seamless shopping experience.</p>
+                <p class="text-gray-500 mt-2">© 2024 All rights reserved.</p>
+            </div>
+
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800">Quick Links</h3>
+                <ul class="mt-3 space-y-2">
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">Home</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">Shop</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">About Us</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Customer Service -->
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800">Customer Service</h3>
+                <ul class="mt-3 space-y-2">
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">FAQs</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">Shipping & Returns</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter Subscription -->
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800">Stay Updated</h3>
+                <p class="text-gray-500 mt-3">Subscribe to our newsletter for exclusive deals and updates.</p>
+                <div class="mt-4 flex">
+                    <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-1">
+                    <button class="bg-indigo-500 hover:bg-indigo-700 text-white px-4 py-3 rounded-r-lg transition">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-200 mt-8 py-4 text-center text-gray-500 text-sm">
+            Made with ❤️ by Kheng Sokheng</div>
+    </footer>
+</body>
+</html>

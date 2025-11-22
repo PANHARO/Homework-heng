@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Matrip</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                200: "#bae6fd",
+                300: "#7dd3fc",
+                400: "#38bdf8",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+                800: "#075985",
+                900: "#0c4a6e",
+              },
+              secondary: {
+                50: "#f5f3ff",
+                100: "#ede9fe",
+                200: "#ddd6fe",
+                300: "#c4b5fd",
+                400: "#a78bfa",
+                500: "#8b5cf6",
+                600: "#7c3aed",
+                700: "#6d28d9",
+                800: "#5b21b6",
+                900: "#4c1d95",
+              },
+              dark: "#0f172a",
+              light: "#f8fafc",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="bg-white top-0 sticky z-50">
+      <header class="inset-x-0 sticky top-0 z-50 border-b-whitesmoke">
+        <nav
+          aria-label="Global"
+          class="flex items-center justify-between p-6 lg:px-8"
+        >
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Matrip</span>
+              <img
+                src="../assets/matrip-logo.png"
+                alt=""
+                class="h-[80px] w-auto"
+              />
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button
+              type="button"
+              command="show-modal"
+              commandfor="mobile-menu"
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                data-slot="icon"
+                aria-hidden="true"
+                class="size-6"
+              >
+                <path
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a
+              href="./index.html"
+              class="text-sm/6 font-semibold text-black hover:bg-blue-200 rounded-lg"
+              >Places</a
+            >
+            <a
+              href="./about_webpage.html"
+              class="text-sm/6 font-semibold text-black hover:bg-blue-200 rounded-lg"
+              >About</a
+            >
+            <a
+              href="./contactus.html"
+              class="text-sm/6 font-semibold text-black hover:bg-blue-200 rounded-lg"
+              >Contact Us</a
+            >
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a
+              href="#"
+              class="text-sm/6 font-semibold text-black p-2 hover:bg-blue-200 rounded-lg"
+              >Log in <span aria-hidden="true">&rarr;</span></a
+            >
+          </div>
+        </nav>
+        <el-dialog>
+          <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+            <div tabindex="0" class="fixed inset-0 focus:outline-none">
+              <el-dialog-panel
+                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10"
+              >
+
+                <div class="flex items-center justify-between">
+                  <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Matrip</span>
+                    <img
+                      src="./assets/matrip-logo.png"
+                      alt=""
+                      class="h-8 w-auto"
+                    />
+                  </a>
+                  <button
+                    type="button"
+                    command="close"
+                    commandfor="mobile-menu"
+                    class="-m-2.5 rounded-md p-2.5 text-gray-200"
+                  >
+                    <span class="sr-only">Close menu</span>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      data-slot="icon"
+                      aria-hidden="true"
+                      class="size-6"
+                    >
+                      <path
+                        d="M6 18 18 6M6 6l12 12"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="mt-6 flow-root">
+                  <div class="-my-6 divide-y divide-white/10">
+                    <div class="space-y-2 py-6">
+                      <a
+                        href="./index.html"
+                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-black hover:bg-white/5"
+                        >Places</a
+                      >
+                      <a
+                        href="./about_webpage.html"
+                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-black hover:bg-white/5"
+                        >About</a
+                      >
+                      <a
+                        href="./contactus.html"
+                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-black hover:bg-white/5"
+                        >Contact Us</a
+                      >
+                    </div>
+                    <div class="py-6">
+                      <a
+                        href="#"
+                        class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
+                        >Log in</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </el-dialog-panel>
+            </div>
+          </dialog>
+        </el-dialog>
+      </header>
+    </div>
+    <!-- About Us -->
+    <header class="bg-blue-600 text-black py-20">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">About Der Lg</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+          Welcome to Der Lg — when we step away from our daily routine and 
+          give ourselves space to relax and recharge. It’s a chance to explore new places, 
+          enjoy new experiences, and create memories with the people we care about. Whether 
+          it’s a trip to the beach, a visit to the mountains, or simply a quiet break at home, 
+          a vacation helps us clear our minds and appreciate the beauty of life. It reminds us 
+          that taking a moment to rest is not a waste of time, but a gift we give to ourselves.
+        </p>
+      </div>
+    </header>
+    <!-- Main Content -->
+
+
+    <main class="container mx-auto px-6 py-16">
+      <!-- Our Story -->
+      <section class="mb-20">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-dark mb-6">Our Story</h2>
+            <p class="text-gray-700 mb-4">
+              when we pack our bags full of excitement, try new foods we can’t even pronounce, 
+              and take photos that will make our friends jealous. Whether we’re splashing in the ocean, 
+              exploring cool places, or just relaxing with no schedule at all, vacation turns ordinary days into awesome adventures. 
+              It’s our chance to laugh more, play more, and enjoy every minute like it’s a 
+              celebration. Vacation isn’t just a break — it’s the best kind of fun we all deserve!
+            </p>
+            <p class="text-gray-700 mb-4">
+                These moments become memories we hold onto, reminders that life is not only about working hard, 
+                but also about feeling alive. A vacation touches our emotions because it gives us something priceless — 
+                time to reconnect with ourselves and with the people who matter most.
+            </p>
+            <p class="text-gray-700">
+              It teaches us that taking time for ourselves isn’t selfish — 
+              it’s the fuel that helps us become the best version of who we are.            
+            </p>
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="https://i.pinimg.com/1200x/5b/b2/f8/5bb2f8bdb4bb2c8853d2fbb98a26eaa3.jpg"
+              alt="AI Neural Network Visualization"
+              class="rounded-lg shadow-xl w-full h-auto"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Our Mission -->
+      <section class="bg-blue-600 rounded-xl p-12 mb-20">
+        <div class="text-center max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-dark mb-6">Our Mission</h2>
+          <p class="text-xl text-gray-700 mb-8">
+            "At Matrip, our mission is simple — to make travel easier, clearer,
+            and more enjoyable for everyone."
+          </p>
+          <div class="flex flex-wrap justify-center gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md w-full sm:w-64">
+              <div class="text-primary-600 mb-4">
+                <i class="fas fa-lightbulb text-3xl"></i>
+              </div>
+              <h3 class="font-bold text-dark mb-2">Professional & Clear</h3>
+              <p class="text-gray-600">
+                Our mission is to make travel simple, trustworthy, and
+                accessible for everyone. We aim to provide clear information,
+                reliable tour options, and a smooth planning experience so every
+                traveler can explore the world with confidence and peace of
+                mind.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md w-full sm:w-64">
+              <div class="text-primary-600 mb-4">
+                <i class="fas fa-shield-alt text-3xl"></i>
+              </div>
+              <h3 class="font-bold text-dark mb-2">
+                Modern & Traveler-Focused
+              </h3>
+              <p class="text-gray-600">
+                Our mission is to empower travelers with easy-to-use tools and
+                honest guidance. We want to remove the stress from trip planning
+                by offering straightforward choices, transparent details, and
+                experiences that create lasting memories.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md w-full sm:w-64">
+              <div class="text-primary-600 mb-4">
+                <i class="fas fa-project-diagram text-3xl"></i>
+              </div>
+              <h3 class="font-bold text-dark mb-2">Short & Impactful</h3>
+              <p class="text-gray-600">
+                Our mission is to simplify the way people travel. Through
+                clarity, convenience, and reliable service, Matrip helps
+                travelers enjoy every journey from start to finish.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+      <!-- Footer -->
+    <footer class="bg-blue-800 shadow-lg mt-auto">
+        <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Column 1: Company Info -->
+            <div>
+
+                <h3 class="text-xl font-semibold text-gray-800">Company</h3>
+                <p class="text-gray-500 mt-3">Delivering quality products with a seamless shopping experience.</p>
+                <p class="text-gray-500 mt-2">© 2024 All rights reserved.</p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800">Quick Links</h3>
+                <ul class="mt-3 space-y-2">
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">Home</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">Shop</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">About Us</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Customer Service -->
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800">Customer Service</h3>
+                <ul class="mt-3 space-y-2">
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">FAQs</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">Shipping & Returns</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-indigo-600 transition">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter Subscription -->
+            <div>
+                <h3 class="text-xl font-semibold text-gray-800">Stay Updated</h3>
+                <p class="text-gray-500 mt-3">Subscribe to our newsletter for exclusive deals and updates.</p>
+                <div class="mt-4 flex">
+                    <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-1">
+                    <button class="bg-indigo-500 hover:bg-indigo-700 text-white px-4 py-3 rounded-r-lg transition">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-200 mt-8 py-4 text-center text-gray-500 text-sm">
+            Made with ❤️ by Kheng Sokheng</div>
+    </footer>
+  </body>
+</html>
